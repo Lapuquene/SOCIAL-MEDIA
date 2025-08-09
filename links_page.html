@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Links Sociais - Direcção Provincial de Obras Públicas de Nampula</title>
     <style>
         * {
@@ -92,6 +92,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            color: white;
         }
 
         .social-btn::before {
@@ -111,7 +112,6 @@
 
         .facebook {
             background: #1877f2;
-            color: white;
         }
 
         .facebook:hover {
@@ -122,7 +122,6 @@
 
         .linkedin {
             background: #0a66c2;
-            color: white;
         }
 
         .linkedin:hover {
@@ -133,13 +132,22 @@
 
         .whatsapp {
             background: #25d366;
-            color: white;
         }
 
         .whatsapp:hover {
             background: #22c55e;
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .instagram {
+            background: #E1306C;
+        }
+
+        .instagram:hover {
+            background: #C13584;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
         }
 
         .icon {
@@ -162,118 +170,3 @@
             
             h1 {
                 font-size: 20px;
-            }
-            
-            .social-btn {
-                padding: 12px 16px;
-                font-size: 14px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header-content">
-            <img src="Emblemaa.png" alt="Emblema da República de Moçambique" class="emblem-logo">
-            <h1>DIRECÇÃO PROVINCIAL DE OBRAS PÚBLICAS DE NAMPULA</h1>
-            <p class="subtitle">Conecte-se conosco através das nossas redes sociais</p>
-        </div>
-        
-        <div class="social-links">
-            <a href="https://web.facebook.com/profile.php?id=100093159813428" class="social-btn facebook" target="_blank">
-                <span class="icon">📘</span>
-                Página no Facebook
-            </a>
-            
-            <a href="https://www.linkedin.com/company/direc%C3%A7%C3%A3o-provincial-de-obras-p%C3%BAblicas-de-nampula/" class="social-btn linkedin" target="_blank">
-                <span class="icon">💼</span>
-                Página no LinkedIn
-            </a>
-            
-            <a href="https://www.whatsapp.com/channel/0029Vb5T5DULCoX0qoAxWh1w/195" class="social-btn whatsapp" target="_blank">
-                <span class="icon">💬</span>
-                Canal do WhatsApp
-            </a>
-        </div>
-          <a href="https://www.instagram.com/dpopnpl/" class="social-btn instagram" target="_blank">
-            <span class="icon">📸</span>
-            Página no Instagram
-        </a>
-        .instagram {
-        background: #E1306C;
-        color: white;
-    }
-
-    .instagram:hover {
-        background: #C13584;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
-    }
-        
-        <div class="footer">
-  Direcção Provincial de Obras Públicas de Nampula<br>
-  Rua da Vigilância no1002, C.P.25<br>
-  Email:dpopn.nampula@nampula.gov.mz<br><br>
-  ©<span class="copyright">DPOP NAMPULA</span>
-</div>
-    </div>
-
-    <script>
-        // Adicionar efeito de clique
-        document.querySelectorAll('.social-btn' ).forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                // Criar efeito ripple
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.width = ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                ripple.style.position = 'absolute';
-                ripple.style.borderRadius = '50%';
-                ripple.style.background = 'rgba(255,255,255,0.3)';
-                ripple.style.transform = 'scale(0)';
-                ripple.style.animation = 'ripple 0.6s linear';
-                ripple.style.pointerEvents = 'none';
-                
-                this.appendChild(ripple);
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-        
-        // CSS para animação ripple
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
